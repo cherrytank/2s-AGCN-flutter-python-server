@@ -443,7 +443,9 @@ class Processor():
             f_r = open(result_file, 'w')
         self.model.eval()
         self.print_log('Eval epoch: {}'.format(epoch + 1))
+      
         for ln in loader_name:
+            print("sss")
             loss_value = []
             score_frag = []
             right_num_total = 0
