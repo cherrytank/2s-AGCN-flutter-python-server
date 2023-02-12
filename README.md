@@ -21,21 +21,13 @@ Two-Stream Adaptive Graph Convolutional Networks for Skeleton-Based Action Recog
  - Preprocess the data with
   
     
-    `python data_gen/kinetics_gendata.py`
+    `python data_gen/kinetics_gendata_val_label.py`
 
  - Generate the bone data with: 
     
-    `python data_gen/gen_bone_data.py`
-     
-# Training & Testing
-
-Change the config file depending on what you want.
-
-
-    `python main.py --config ./config/kinetics/train_joint.yaml`
-
-    `python main.py --config ./config/kinetics/train_bone.yaml`
-To ensemble the results of joints and bones, run test firstly to generate the scores of the softmax layer. 
+    `python data_gen/gen_bone_data_val.py`
+    
+ - test data with:
 
     `python main.py --config ./config/kinetics/test_joint.yaml`
 
