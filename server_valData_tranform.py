@@ -6,7 +6,6 @@ app = Flask(__name__)
 @app.route("/pyserver",methods=['POST'])
 def home():
 	data = json.loads(request.data)
-	print(data)
 	print(create_output_file(data))
 	return "server get data"
 	

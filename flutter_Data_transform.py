@@ -40,10 +40,7 @@ def take_skeleton(data_index,data):
     data_frame_index=data_index*54
 
     for i in range(data_frame_index,data_frame_index+54):#coco format (18(joints)*2(x,y)+18(score))
-        print(i)
-        print("------------------------")
         data_array.append(float(data[i]))
-        print(data_array)
         #take data from pose_keypoints_2d
     while index != 54:
         pose.append(data_array[index])     # pose x
